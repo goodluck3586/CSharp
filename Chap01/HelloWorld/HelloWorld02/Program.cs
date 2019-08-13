@@ -15,7 +15,8 @@ namespace HelloWorld02
 
             WriteLine(args.Length);
             WriteLine("Hello {0}", args[0]);
-            WriteLine($"Hello {args[1]}");
+            WriteLine($"Hello {args[1]}");  // 문자열 보간법
+            
         }
     }
 }
