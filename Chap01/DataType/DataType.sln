@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringHandling01", "StringH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringHandling02", "StringHandling02\StringHandling02.csproj", "{43CC5C47-D956-4282-BD68-AD397ED2B058}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataType04", "DataType04\DataType04.csproj", "{9EBE671C-CD32-48C1-9F72-450331EEC823}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{43CC5C47-D956-4282-BD68-AD397ED2B058}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43CC5C47-D956-4282-BD68-AD397ED2B058}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43CC5C47-D956-4282-BD68-AD397ED2B058}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EBE671C-CD32-48C1-9F72-450331EEC823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EBE671C-CD32-48C1-9F72-450331EEC823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EBE671C-CD32-48C1-9F72-450331EEC823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EBE671C-CD32-48C1-9F72-450331EEC823}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

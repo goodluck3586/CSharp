@@ -3,35 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
+ * 데이터 형식 바꾸기
+ */
 namespace DataType03
 {
     class Program
     {
-        enum DialogResult { YES, NO, CONFIRM, CANCEL, OK }  // 열거형(같은 범주에 속하는 여러 개의 상수 선언)
-
         static void Main(string[] args)
         {
-            /***** 상수 *****/
-            const int a = 3;
-            //a = 4;  // 에러 발생
+            /********** 문자열 ↔ 숫자 변환 **********/
+            string strNum = "12345";
+            // int num = (int)strNum;  // Error: (int)는 숫자 형식간의 변환
+            int intNum = int.Parse(strNum);
 
-            /***** 열거형 *****/
-            DialogResult result = DialogResult.OK;
-            Console.WriteLine((int)DialogResult.YES);
-            Console.WriteLine((int)DialogResult.NO);
-            Console.WriteLine((int)DialogResult.CONFIRM);
-            Console.WriteLine(DialogResult.CANCEL);
-            Console.WriteLine(result == DialogResult.OK);
-            Console.WriteLine();
+            // string str = intNum;  // Error
+            string str = intNum.ToString();
 
-            /***** Nullable 형식 *****/
-            int? n = null;
-
-            Console.WriteLine(n.HasValue);
-
-            n = 100;
-            Console.WriteLine(n.Value);
+            string input = Console.ReadLine();
+            Console.WriteLine(input.GetType());
+            int i = Convert.ToInt32(input);
         }
     }
 }
