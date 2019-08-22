@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
- * 상수, 열거형, Nullable 형식
+ * 상수, 열거형, Nullable 형식, var
  */
 namespace DataType04
 {
@@ -39,7 +39,7 @@ namespace DataType04
             Console.WriteLine(days);
 
             //Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
-            Console.WriteLine("요일을 숫자(일:0, 월:1)로 입력하시오:");
+            Console.Write("요일을 숫자(일:0, 월:1)로 입력하시오:");
             string input = Console.ReadLine();
 
             //today 
@@ -69,6 +69,7 @@ namespace DataType04
 
             Console.WriteLine('\n');
 
+
             /********* Nullable 형식 *********/
             int? n = null;
 
@@ -76,6 +77,18 @@ namespace DataType04
 
             n = 100;
             Console.WriteLine(n.Value);
+
+            Console.WriteLine('\n');
+
+
+            /********** var **********/
+            var a = 3;
+            var b = "hello";
+            var c = pi;
+
+            Console.WriteLine("a: {0}", a.GetType());
+            Console.WriteLine("b: {0}", b.GetType());
+            Console.WriteLine("c: {0}", c.GetType());
         }
     }
 }
