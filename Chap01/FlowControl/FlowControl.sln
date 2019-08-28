@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise03", "DateTimeTest\Exercise03.csproj", "{EAF03439-70DF-475C-B0D0-5F4BCC337D22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise04", "DateTimeTest\Exercise04.csproj", "{EAF03439-70DF-475C-B0D0-5F4BCC337D22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise04", "Exercise04\Exercise04.csproj", "{D1F78825-882F-454C-A825-6C0EE13C5ECA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise05", "Exercise04\Exercise05.csproj", "{D1F78825-882F-454C-A825-6C0EE13C5ECA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchCaseTest", "SwitchCaseTest\SwitchCaseTest.csproj", "{ED599A5B-C992-4E50-892F-31FEE20F9814}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumpStatement", "JumpStatement\JumpStatement.csproj", "{8F381631-1EC5-4FC9-A874-5450943EDF19}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakAndContinue", "JumpStatement\BreakAndContinue.csproj", "{8F381631-1EC5-4FC9-A874-5450943EDF19}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GotoTest", "GotoTest\GotoTest.csproj", "{453D7534-D836-44AA-BC4E-10E1373E8241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Execise03", "Execise03\Execise03.csproj", "{61C365D2-6B21-4E8E-9C98-12BCC1FA2C2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{453D7534-D836-44AA-BC4E-10E1373E8241}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{453D7534-D836-44AA-BC4E-10E1373E8241}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{453D7534-D836-44AA-BC4E-10E1373E8241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61C365D2-6B21-4E8E-9C98-12BCC1FA2C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61C365D2-6B21-4E8E-9C98-12BCC1FA2C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61C365D2-6B21-4E8E-9C98-12BCC1FA2C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61C365D2-6B21-4E8E-9C98-12BCC1FA2C2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

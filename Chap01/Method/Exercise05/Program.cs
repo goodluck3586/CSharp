@@ -4,7 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise05
+/*
+ * Fibonacci 수열 출력
+ */
+
+namespace Exercise06
 {
     class Program
     {

@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * params
+ */
+
 namespace Method04_params
 {
     class Program
@@ -46,7 +50,5 @@ namespace Method04_params
 
             return sum;
         }
-
-
     }
 }

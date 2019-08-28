@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Method01", "Method01\Method01.csproj", "{24C420C8-D3B4-4224-A301-FA4652C9FF77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise05", "Exercise05\Exercise05.csproj", "{5E16B95E-3216-4428-804A-1D0B743F8894}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise06", "Exercise05\Exercise06.csproj", "{5E16B95E-3216-4428-804A-1D0B743F8894}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Method02_swap", "Method02_swap\Method02_swap.csproj", "{E4C9372F-7438-422E-BA60-B2D3C52F75FB}"
 EndProject

@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * LocalFunction
+ */
 namespace Method05_LocalFunction
 {
     class Program

@@ -4,7 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise04
+/*
+ * Check Alphabet
+ */
+namespace Exercise05
 {
     class Program
     {

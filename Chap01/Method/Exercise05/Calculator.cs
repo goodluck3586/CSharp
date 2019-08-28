@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise05
+namespace Exercise06
 {
     class Calculator
     {
