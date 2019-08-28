@@ -14,9 +14,7 @@ namespace StringHandling
         static void Main(string[] args)
         {
             string greeting = "Good Morning";
-
-            Console.WriteLine(greeting);
-            Console.WriteLine();
+            Console.WriteLine(greeting+'\n');
 
             /********** 문자열 찾기 **********/
             // IndexOf() : 찾는 문자열의 위치
@@ -41,7 +39,6 @@ namespace StringHandling
 
             // Replace() : 지정된 문자열을 다른 문자열로 수정한 문자열 반환
             Console.WriteLine("Replace 'Morning' with 'Evening' : {0}", greeting.Replace("Morning", "Evening"));
-
             Console.WriteLine();
 
             /********** 문자열 변형하기 **********/
@@ -58,31 +55,42 @@ namespace StringHandling
             Console.WriteLine($"'{str.Trim()}'");
             Console.WriteLine($"'{str.TrimStart()}'");
             Console.WriteLine($"'{str.TrimEnd()}'");
-
             Console.WriteLine();
+
 
             /********** 문자열 분할하기 **********/
             // Substring() : 문자열 추출
-            string words = "This is a list of words, with: a bit of punctuation" + 
-                "\tand a tab character.";
+            string words = "이것은 구두점과 \t탭 문자가 포함된 단어들 입니다.";
             Console.WriteLine(words);
-            Console.WriteLine(words.Substring(0, 5));  // "This"
-            Console.WriteLine(words.Substring(30));  // "Morning"
+            Console.WriteLine(words.Substring(0, 3));  // "이것은"
+            Console.WriteLine(words.Substring(20));  // "단어들 입니다."
             Console.WriteLine();
 
             // Split() : 문자열을 지정된 기준으로 분리한 배열 반환
-            string[] split1 = words.Split(new Char[] {' ', ',', '.', ':', '\t'});
-            Console.WriteLine($"split1.Length : {split1.Length}");
-            foreach(string s in split1)
+            string[] s1 = words.Split(new Char[] {' ', ',', '.', ':', '\t'});
+            Console.WriteLine($"s1.Length : {s1.Length}");
+
+            foreach(string s in s1)
+            {
+                Console.WriteLine(s);
+            }
+
+            foreach(string s in s1)
             {
                 if(s.Trim() != "")
                     Console.Write(s+' ');
             }
             Console.WriteLine();
 
-            string[] split2 = words.Split(new Char[] { ' ', ',', '.', ':', '\t' }, StringSplitOptions.RemoveEmptyEntries);
-            Console.WriteLine($"split2.Length : {split2.Length}");
-            foreach (string s in split2)
+            string[] s2 = words.Split(new Char[] { ' ', ',', '.', ':', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+            Console.WriteLine($"s2.Length : {s2.Length}");
+
+            foreach (string s in s2)
+            {
+                Console.WriteLine(s);
+            }
+
+            foreach (string s in s2)
             {
                 Console.Write(s + ' ');
             }
