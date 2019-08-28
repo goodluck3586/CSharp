@@ -13,7 +13,6 @@ namespace DataType04
     {
         // 열거형(같은 범주에 속하는 여러 개의 상수 선언), 0부터 순차적으로 값이 부여되나 명시적으로 설정 가능
         enum Day { Sun, Mon, Tue, Wed, Thu, Fri, Sat};
-        enum Day2 { Sun, Mon, Tue, Wed, Thu, Fri, Sat };
 
         static void Main(string[] args)
         {
