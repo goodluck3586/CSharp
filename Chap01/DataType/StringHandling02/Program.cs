@@ -40,21 +40,10 @@ namespace StringHandling02
             result = string.Format("{0, 10}DEF", "ABC");
             Console.WriteLine(result);
 
-            // 숫자 서식
-            Console.WriteLine(
-            "(C) Currency: . . . . . . . . {0:C}\n" +
-            "(D) Decimal:. . . . . . . . . {0:D}\n" +
-            "(E) Scientific: . . . . . . . {1:E}\n" +
-            "(F) Fixed point:. . . . . . . {1:F}\n" +
-            "(G) General:. . . . . . . . . {0:G}\n" +
-            "    (default):. . . . . . . . {0} (default = 'G')\n" +
-            "(N) Number: . . . . . . . . . {0:N}\n" +
-            "(P) Percent:. . . . . . . . . {1:P}\n" +
-            "(R) Round-trip: . . . . . . . {1:R}\n" +
-            "(X) Hexadecimal:. . . . . . . {0:X}\n",
-            -123, -123.45f);
-
             // 날짜 서식
+            DateTime dt = new DateTime(2019, 8, 28, 13, 30, 22);
+            Console.WriteLine("{0}", dt);
+
             Console.WriteLine("{0:d}", DateTime.Now);
             Console.WriteLine("{0:D}", DateTime.Now);
             Console.WriteLine("{0:f}", DateTime.Now);
