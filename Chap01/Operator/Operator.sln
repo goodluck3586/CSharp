@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalOperator", "ConditionalOperator\ConditionalOperator.csproj", "{F46F0FBB-0120-42C8-964C-52F7E7FBA8BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise02", "ConditionalOperator\Exercise02.csproj", "{F46F0FBB-0120-42C8-964C-52F7E7FBA8BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullConditionalOperator", "NullConditionalOperator\NullConditionalOperator.csproj", "{490CB755-2280-4481-B129-D666B6DD8E0B}"
 EndProject

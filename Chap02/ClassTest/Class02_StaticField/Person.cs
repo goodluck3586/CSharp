@@ -6,21 +6,35 @@ using System.Threading.Tasks;
 
 namespace Class02_StaticField
 {
-    class Person
+    class Actor
     {
         // 인스턴스  필드
-        public int CountOfInstance;
         public string name;
-
-        // 정적 필드
-        static public int CountOfInstanceStatic;
+        public int countOfInstance;
         
-        public Person(string name)
+        // 정적 필드
+        static public int staticCountOfInstance;
+        
+        // 생성자
+        public Actor(string name)
         {
             this.name = name;
 
-            CountOfInstance++;
-            CountOfInstanceStatic++;
+            countOfInstance++;
+            staticCountOfInstance++;
+            Console.WriteLine($"{name} 객체 생성");
+        }
+
+        // 인스턴스 메소드
+        public void SetName(string name)
+        {
+            this.name = name;
+        }
+
+        // 정적 메소드
+        public static int GetInstanceCount()
+        {
+            return staticCountOfInstance;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Exercise05
         {
             char c;
             Console.WriteLine("Enter a character : ");
-            c = char.Parse(Console.ReadLine());
+            c = (char)Console.Read();
 
             if(c>='a' && c<='z' || c>='A' && c <= 'Z')
             {

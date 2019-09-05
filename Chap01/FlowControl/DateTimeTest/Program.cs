@@ -14,7 +14,7 @@ namespace DateTimeTest
         static void Main(string[] args)
         {
             //int currentTime = DateTime.Now.Hour;
-            int currentTime = new DateTime(2019, 8, 13, 11, 30, 50).Hour;
+            int currentTime = new DateTime(2019, 8, 13, 15, 30, 50).Hour;
             if (currentTime < 12)
             {
                 Console.WriteLine($"현재 오전 {currentTime}시 입니다.");

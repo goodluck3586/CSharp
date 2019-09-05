@@ -4,26 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
- * Fibonacci 수열 출력
- */
-
-namespace Exercise06
+/* Exercise05 두 정수 n, m(n<=m)을 입력받아 두 수 사이의 합계와 평균 출력 */
+namespace Exercise05
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // 반복문을 이용한 피보나치 수열 출력
-            Console.WriteLine("반복문을 이용한 피보나치 수열 출력");
-            for (ulong i = 0; i <= 20; i++)
-                Console.WriteLine($"FibonacciLoop({i,-3}) : {Calculator.FibonacciLoop(i)}");
-            //Console.WriteLine($"{Calculator.FibonacciLoop(i)}");
 
-            // 재귀호출을 이용한 피보나치 수열 출력
-            Console.WriteLine("재귀호출을 이용한 피보나치 수열 출력");
-            for (ulong i = 0; i <= 20; i++)
-                Console.WriteLine($"FibonacciRecursive({i,-3}) : {Calculator.FibonacciRecursive(i)}");
         }
     }
 }

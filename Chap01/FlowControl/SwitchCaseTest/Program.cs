@@ -20,9 +20,13 @@ namespace SwitchCaseTest
             else
                 obj = s;
 
+            Console.WriteLine("obj: {0}", obj);
+            Console.WriteLine("obj: {0}", obj.GetType());
+
+
             switch (obj)
             {
-                case int i:
+                case System.Int32 i:
                     Console.WriteLine($"{i}는 int형 입니다.");
                     break;
                 case float f:

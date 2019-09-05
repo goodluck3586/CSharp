@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
- * ConditionalOperator
+ * 연습문제 02 (정수를 입력받아 홀수/짝수 출력)
  */
-namespace ConditionalOperator
+namespace Exercise02
 {
     class Program
     {

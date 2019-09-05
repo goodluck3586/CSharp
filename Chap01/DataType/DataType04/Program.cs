@@ -20,7 +20,6 @@ namespace DataType04
             const double pi = 3.14;
             //a = 3.141592;  // Error: 상수는 값을 수정할 수 없다.
             Console.WriteLine("{0} ~ {1}", double.MinValue, double.MaxValue);
-
             Console.WriteLine('\n');
 
             /********** 열거형(enum) : 명명된 상수 집합 **********/
@@ -30,7 +29,7 @@ namespace DataType04
             Console.WriteLine("{0}, {0:d}", Day.Sun);
             Console.WriteLine("{0}, {0:d}", Day.Mon);
             Console.WriteLine("{0}, {0:d}", Day.Tue);
-            Console.WriteLine(Day2.Mon.GetType());
+            Console.WriteLine(Day.Mon.GetType());
 
             //Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
             Console.Write("요일을 숫자(일:0, 월:1)로 입력하시오:");

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Class03_thisConstructor
 {
@@ -12,23 +8,23 @@ namespace Class03_thisConstructor
 
         public Class1()
         {
-            this.a = 5425;
-            Console.WriteLine($"Class1()");
+            this.a = 1;
+            Console.WriteLine($"Class1() 호출");
         }
 
         public Class1(int b)
         {
-            this.a = 5425;
+            this.a = 1;
             this.b = b;
-            Console.WriteLine($"Class1({b})");
+            Console.WriteLine($"Class1({b}) 호출");
         }
 
         public Class1(int b, int c)
         {
-            this.a = 5425;
+            this.a = 1;
             this.b = b;
             this.c = c;
-            Console.WriteLine($"Class1({b}, {c})");
+            Console.WriteLine($"Class1({b}, {c}) 호출");
         }
 
         public void PrintFields()

@@ -1,29 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Class05_Inheritance
 {
     class Base
     {
-        protected string name;
-
-        public Base(string name)
+        public Base()
         {
-            this.name = name;
-            Console.WriteLine($"부모 생성자 호출 : {this.name}.Base()");
+            Console.WriteLine("Base()");
         }
-
         ~Base()
         {
-            Console.WriteLine($"부모 소멸자 호출 : {this.name}.~Base()");
+            Console.WriteLine("~Base()");
         }
+    }
 
-        public void BaseMethod()
+    class Derived : Base
+    {
+        public Derived()
         {
-            Console.WriteLine($"부모 메서드 호출 : {name}.BaseMethod()");
+            Console.WriteLine("Derived()");
+        }
+        ~Derived()
+        {
+            Console.WriteLine("~Derived()");
         }
     }
 }
+
