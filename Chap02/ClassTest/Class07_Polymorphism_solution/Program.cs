@@ -17,7 +17,7 @@ namespace Class07_Polymorphism_solution
             Human human = new Human();
             human.Move();
 
-            /* 자식이 부모 타입으로 암시적으로 형변환된 경우 */
+            /* 자식이 부모 타입으로 암시적으로 형변환된 경우 : 오버라이딩된 메소드는 자식의 메소드 실행 → 다형성 구현 */
             one = lion;
             one.Move();
 

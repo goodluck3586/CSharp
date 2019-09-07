@@ -21,7 +21,7 @@ namespace Class09_Struct
 
         public override string ToString()
         {
-            return string.Format($"{X}, {Y}, {Z}");
+            return string.Format("{0}, {1}, {2}", X, Y, Z);
         }
     }
 

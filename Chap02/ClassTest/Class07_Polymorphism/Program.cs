@@ -17,7 +17,7 @@ namespace Class07_Polymorphism
             Human human = new Human();
             human.Move();
 
-            /* 자식이 부모 타입으로 암시적으로 형변환된 경우 */
+            /* 자식이 부모 타입으로 암시적으로 형변환된 경우 : 자식의 메소드로 동작하지 않음. */
             one = lion;
             one.Move();
 
