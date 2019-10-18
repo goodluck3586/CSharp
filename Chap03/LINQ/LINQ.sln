@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ01", "LINQ01\LINQ01.csproj", "{F68006BF-31B9-42B2-8E63-C99D06746018}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileHandling", "FileHandling\FileHandling.csproj", "{D4BF9FD5-7012-4A83-994F-9E3F0FA857BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ02_SimpleLinq", "LINQ02_SimpleLinq\LINQ02_SimpleLinq.csproj", "{DAAD514C-0B01-4635-A553-E0C2282C3607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ03_doubleFrom", "LINQ03_doubleFrom\LINQ03_doubleFrom.csproj", "{B8CE886B-86D8-4333-8C72-F9F3644F3476}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ04_groupby", "LINQ04_groupby\LINQ04_groupby.csproj", "{D12280F7-95C2-4622-8721-459AD1BA1AD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ05_join", "LINQ05_join\LINQ05_join.csproj", "{B942B9FB-FA4A-4DAD-881D-A8DED308F69F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ06_QueryMethod", "LINQ06_QueryMethod\LINQ06_QueryMethod.csproj", "{A8B4D42D-66DD-4595-81E7-B6EE10B8DBAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F68006BF-31B9-42B2-8E63-C99D06746018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F68006BF-31B9-42B2-8E63-C99D06746018}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F68006BF-31B9-42B2-8E63-C99D06746018}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F68006BF-31B9-42B2-8E63-C99D06746018}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4BF9FD5-7012-4A83-994F-9E3F0FA857BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4BF9FD5-7012-4A83-994F-9E3F0FA857BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4BF9FD5-7012-4A83-994F-9E3F0FA857BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4BF9FD5-7012-4A83-994F-9E3F0FA857BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAAD514C-0B01-4635-A553-E0C2282C3607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAAD514C-0B01-4635-A553-E0C2282C3607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAAD514C-0B01-4635-A553-E0C2282C3607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAAD514C-0B01-4635-A553-E0C2282C3607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8CE886B-86D8-4333-8C72-F9F3644F3476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8CE886B-86D8-4333-8C72-F9F3644F3476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8CE886B-86D8-4333-8C72-F9F3644F3476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8CE886B-86D8-4333-8C72-F9F3644F3476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D12280F7-95C2-4622-8721-459AD1BA1AD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D12280F7-95C2-4622-8721-459AD1BA1AD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D12280F7-95C2-4622-8721-459AD1BA1AD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D12280F7-95C2-4622-8721-459AD1BA1AD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B942B9FB-FA4A-4DAD-881D-A8DED308F69F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B942B9FB-FA4A-4DAD-881D-A8DED308F69F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B942B9FB-FA4A-4DAD-881D-A8DED308F69F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B942B9FB-FA4A-4DAD-881D-A8DED308F69F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8B4D42D-66DD-4595-81E7-B6EE10B8DBAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8B4D42D-66DD-4595-81E7-B6EE10B8DBAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8B4D42D-66DD-4595-81E7-B6EE10B8DBAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8B4D42D-66DD-4595-81E7-B6EE10B8DBAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3314565F-9175-422A-ACA8-42014A52BCF8}
+	EndGlobalSection
+EndGlobal

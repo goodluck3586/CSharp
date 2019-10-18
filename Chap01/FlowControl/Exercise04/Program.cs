@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
- * Check Alphabet
- */
+/* Check Alphabet : 문자를 하나 입력받아 그것이 알파벳인지 아닌지 판별 */
 namespace Exercise05
 {
     class Program

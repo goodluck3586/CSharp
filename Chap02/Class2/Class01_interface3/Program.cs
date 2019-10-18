@@ -10,9 +10,13 @@ namespace Class01_interface3
     {
         static void Main(string[] args)
         {
-            ClimateMonitor monitor = new ClimateMonitor(new FileLogger("MyLog.txt"));
-            //ClimateMonitor monitor = new ClimateMonitor(new ConsoleLogger());
-            monitor.start();
+            // 콘솔에 로그 출력
+            ClimateMonitor consoleMonitor = new ClimateMonitor(new ConsoleLogger());
+            consoleMonitor.start();
+
+            // 파일에 로그 출력
+            ClimateMonitor fileMonitor = new ClimateMonitor(new FileLogger("MyLog.txt"));
+            fileMonitor.start();
         }
     }
 }

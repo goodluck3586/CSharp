@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
- * 현재가 오전인지 오후인지 출력
- */
+/* 현재시간 출력 */
 namespace DateTimeTest
 {
     class Program

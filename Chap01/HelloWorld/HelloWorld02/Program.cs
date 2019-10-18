@@ -1,6 +1,7 @@
 ﻿using System;
 using static System.Console;
 
+/* D:\Repository\CSharp\Chap01\HelloWorld\HelloWorld02\bin\Debug>HelloWorld02.exe 아이유 이선균 */
 namespace HelloWorld02
 {
     class Program

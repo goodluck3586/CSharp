@@ -4,10 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
- * 참조에 의한 매개변수 전달
- * ref, out
- */
+/* 참조에 의한 매개변수 전달 ref, out */
 namespace Method02_swap
 {
     class Program

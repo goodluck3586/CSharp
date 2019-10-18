@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Class01_interface1
 {
@@ -17,14 +13,27 @@ namespace Class01_interface1
     {
         static void Main(string[] args)
         {
-            ILogger logger = new ConsoleLogger(); // 인터페이스는 인스턴스는 못 만들지만, 참조는 만들 수 있다.
-
+            // 인터페이스는 인스턴스는 못 만들지만, 부모 참조변수와 같은 역할을 할 수 있다.
+            // 파생 클래스는 부모 클래스 또는 인터페이스와 같은 형식으로 간주될 수 있다.
+            ILogger logger = new ConsoleLogger(); 
             logger.WriteLog("Hello World!");
+
+            if(logger is ConsoleLogger)
+            {
+                ConsoleLogger cl = logger as ConsoleLogger;
+                cl.DerivedMethod();
+            }
         }
 
         public void WriteLog(string message)
         {
+            Console.WriteLine($"{DateTime.Now}, {message}");
             Console.WriteLine($"{DateTime.Now.ToLocalTime()}, {message}");
+        }
+
+        public void DerivedMethod()
+        {
+            Console.WriteLine("DerivedMethod()");
         }
     }
 }

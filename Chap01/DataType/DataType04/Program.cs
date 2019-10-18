@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
- * 상수, 열거형, Nullable 형식, var
- */
+/* 상수, 열거형, Nullable형식, var */
 namespace DataType04
 {
     class Program
@@ -51,7 +49,6 @@ namespace DataType04
 
             n = 100;
             Console.WriteLine(n.Value);
-
             Console.WriteLine('\n');
 
 

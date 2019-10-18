@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
- * 연습문제 02 (정수를 입력받아 홀수/짝수 출력)
- */
+/* 연습문제 02 (정수를 입력받아 홀수/짝수 출력) */
 namespace Exercise02
 {
     class Program

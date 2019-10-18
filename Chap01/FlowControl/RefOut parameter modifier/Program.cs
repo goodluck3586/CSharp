@@ -4,10 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
- * 메서드 파라미터
- */
-
+/* 메서드 파라미터 */
 namespace MethodParameter
 {
     class Program

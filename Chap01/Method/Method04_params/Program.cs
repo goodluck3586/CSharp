@@ -4,10 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
- * params
- */
-
+/* params */
 namespace Method04_params
 {
     class Program

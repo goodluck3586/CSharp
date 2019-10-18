@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
- * overloading
- */
+/* overloading */
 namespace Method03_overloading
 {
     class Program

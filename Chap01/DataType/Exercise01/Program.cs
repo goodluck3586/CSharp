@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/* 두 실수값을 입력받아 합계 출력하기 */
 namespace Exercise01
 {
     class Program

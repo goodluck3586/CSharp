@@ -1,9 +1,6 @@
 ﻿using System;
 
-/*
- * 두 개의 정수 n과 m (n <= m)이 주어지면 
- * [n, m] 범위의 합계와 평균을 출력
- */
+/* 두 개의 정수 n과 m (n <= m)이 주어지면 [n, m] 범위의 합계와 평균을 출력 */
 namespace Exercise03
 {
     class Program

@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace Method01
 {
+    class Calculator
+    {
+        public static int Plus(int a, int b)
+        {
+            Console.WriteLine("Input : {0}, {1}", a, b);
+            return a + b;
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)

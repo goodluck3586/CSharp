@@ -1,8 +1,6 @@
 ﻿using System;
 
-/*
- * 데이터 형식 바꾸기
- */
+/* 문자열 ↔ 숫자 변환 */
 namespace DataType03
 {
     class Program

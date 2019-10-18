@@ -1,10 +1,7 @@
 ﻿using System;
 
-/*
- * object 형식(System.Object)
- * 박싱/언박싱
- */
-
+/* 박싱/언박싱 */
+/* object 형식(System.Object) */
 namespace DataType02
 {
     class Program
