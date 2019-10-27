@@ -30,8 +30,6 @@ namespace Event03_EventHandler
         // 주어진 수까지 루프를 돌면서 소수가 발견되면 콜백 메서드 호출
         public void Run(int limit)
         {
-
-
             for (int i = 2; i <= limit; i++)
             {
                 if (IsPrime(i) == true && PrimeGenerated != null)

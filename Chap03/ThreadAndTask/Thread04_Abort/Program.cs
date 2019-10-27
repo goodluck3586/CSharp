@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+
 /* 615p 예제 : 스레드 중지 */
 namespace Thread04_Abort  // Interrupt
 {

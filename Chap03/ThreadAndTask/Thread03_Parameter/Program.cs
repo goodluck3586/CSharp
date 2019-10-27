@@ -21,33 +21,25 @@ namespace Thread03_Parameter
             t2.Start(nameCard);
         }
 
-        // 하나의 값을 매개변수를 받는 메소드
+        // 숫자 값을 매개변수를 받아 반복문을 돌리는 메소드
         private static void threadFunc1(object count)
         {
             for (int i = 0; i < (int)count; i++)
             {
                 Thread.Sleep(1000);
-                Console.WriteLine($"threadFunc : {i}");
+                Console.WriteLine($"threadFunc1 : {i}");
             }
         }
 
-        // 객체를 매개변수로 받는 메소드
+        // 객체를 매개변수로 받아 출력하는 메소드
         private static void threadFunc2(object obj)
         {
             NameCard nc = (NameCard)obj;
-            Console.WriteLine($"Name: {nc.Name}, Age: {nc.Age}");
-        }
-    }
-
-    class NameCard
-    {
-        public string Name;
-        public int Age;
-
-        public NameCard(string name, int age)
-        {
-            Name = name;
-            Age = age;
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine($"threadFunc2 : Name {nc.Name}, Age {nc.Age}");
+                Thread.Sleep(1000);
+            }
         }
     }
 }

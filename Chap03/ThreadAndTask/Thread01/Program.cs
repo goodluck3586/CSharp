@@ -27,7 +27,7 @@ namespace Thread01
             Thread t = new Thread(threadFunc);
             //t.IsBackground = true;  // 프로그램 실행 종료에 영향을 주지 않는다.
             t.Start();  // 스레드가 CPU에 의해 선택되어 실행될 수 있는 단계까지 시간이 걸린다.
-            //t.Join();  // t 스레드가 종료될 때 까지 현재 스레드 무한 대기(다른 스레드 실행이 종료되기를 기다리는 경우 사용)
+            //t.Join();  // t 스레드가 종료될 때 까지 다른 스레드 무한 대기
 
             Console.WriteLine("Main 스레드 종료");
         }

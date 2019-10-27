@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DF15AEF4-3EC8-4FB3-A32B-983F72A7C2DC}</ProjectGuid>
+    <ProjectGuid>{F26E7F35-18D7-45D5-B050-A4BCA736FB60}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Thread03_Parameter</RootNamespace>
-    <AssemblyName>Thread03_Parameter</AssemblyName>
+    <RootNamespace>MakeBreakfast02_Async</RootNamespace>
+    <AssemblyName>MakeBreakfast02_Async</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NameCard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
