@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-/* 폼 UI는 Form1.cs과 Form1.Designer.cs 파일에서 정의 */
-/* Form1.cs는 Form1.designer.cs와 동일한 클래스로서 
- * 주로 UI의 이벤트를 핸들링 하는 코드들을 적게된다. */
+// Form은 GUI 애플리케이션의 기본 단위로 정보를 사용자에게 표시하는 비주얼 화면
+// Form UI는 Form1.cs과 Form1.Designer.cs 파일에서 정의 
+// Form1.cs는 Form1.designer.cs와 동일한 클래스로서 주로 UI의 이벤트를 핸들링 하는 코드들을 적게된다. 
 namespace HelloWorld
 {
     public partial class Form1 : Form
