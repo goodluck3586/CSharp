@@ -17,18 +17,12 @@ namespace WinForm07_ListView
             InitializeComponent();
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            MessageBox.Show(this.listViewPeople.SelectedItems[0].SubItems[1].Text);
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            var people = GetPeopleList();  // 리스트뷰에 넣을 List<Person> 가져오기
-
+            var peopleList = GetPeopleList();  // 리스트뷰에 넣을 List<Person> 가져오기
             listViewPeople.Items.Clear();  // clear the list view
 
-            foreach (var person in people)
+            foreach (var person in peopleList)
             {
                 var row = new string[] { person.Id.ToString(), person.Name, person.MajorWork };
                 var newListViewItem = new ListViewItem(row);
