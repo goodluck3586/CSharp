@@ -26,7 +26,7 @@ namespace WinFormDB01
                 // MySqlConnection 생성자는 연결 문자열을 매개 변수 중 하나로 사용한다. 
                 // 연결 문자열은 MySQL 데이터베이스에 연결하는 데 필요한 정보를 제공한다.
 
-                string connectionString = "Server=localhost;port=3306;username=root;password=1111"; 
+                string connectionString = "Server=127.0.0.1;port=3306;username=root;password=1111"; 
                 //string connectionString = "server=127.0.0.1;uid=root;pwd=12345;database=test";
                 // 1. MySqlConnection connection = new MySqlConnection(connectionString);
 

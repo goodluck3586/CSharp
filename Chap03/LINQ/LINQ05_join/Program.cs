@@ -59,7 +59,7 @@ namespace LINQ05_join
 
             #region 외부 조인
             // 2. 쿼리 만들기(이름으로 외부 조인 : Name, Title, Height의 무명 객체 생성)
-            profileList = from profile in arrProfile 
+            profileList = from profile in arrProfile
                           join product in arrProduct on profile.Name equals product.Star into ps
                           from product in ps.DefaultIfEmpty(new Product() { Title="그런거 없음"})
                           select new { Name = profile.Name, Work = product.Title, Height = profile.Height };

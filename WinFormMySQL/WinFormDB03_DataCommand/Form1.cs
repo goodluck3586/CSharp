@@ -28,26 +28,15 @@ namespace WinFormDB03_DataCommand
             try
             {
                 conn.Open();
-                ShowConnectionState();
+                if (conn.State == ConnectionState.Open)
+                {
+                    labelDBConnStatus.Text = "연결 성공";
+                    labelDBConnStatus.ForeColor = Color.Green;
+                }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void ShowConnectionState()
-        {
-            if (conn.State == ConnectionState.Open)
-            {
-                labelDBConnStatus.Text = "연결 성공";
-                labelDBConnStatus.ForeColor = Color.Green;
-            }
-            else
-            {
-                labelDBConnStatus.Text = "연결 실패";
-                labelDBConnStatus.ForeColor = Color.Red;
             }
         }
 
@@ -55,8 +44,11 @@ namespace WinFormDB03_DataCommand
         {
             try
             {
-                string sql = $"SELECT * FROM city WHERE id='{txtId.Text}'";
+                string sql = "SELECT * FROM city WHERE id = @id";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.Add("@id", MySqlDbType.Int32);
+                cmd.Parameters["@id"].Value = int.Parse(txtId.Text);
+                //cmd.Parameters.AddWithValue("@id", txtId.Text);
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.Read())
@@ -70,7 +62,6 @@ namespace WinFormDB03_DataCommand
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
@@ -79,15 +70,22 @@ namespace WinFormDB03_DataCommand
         {
             try
             {
-                txtPopulation.Text = txtPopulation.Text == "" ? "0" : txtPopulation.Text;
-                string sql = $"INSERT INTO city (Name, CountryCode, District, Population) VALUES('{txtName.Text}', '{txtCountryCode.Text}', '{txtDistrict.Text}', '{txtPopulation.Text}')";
+                string sql = $"INSERT INTO city (Name, CountryCode, District, Population) VALUES(@Name, @CountryCode, @District, @Population)";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.Add("@Name", MySqlDbType.VarChar);
+                cmd.Parameters.Add("@CountryCode", MySqlDbType.VarChar, 3);
+                cmd.Parameters.Add("@District", MySqlDbType.VarChar);
+                cmd.Parameters.Add("@Population", MySqlDbType.Int32);
+                cmd.Parameters["@Name"].Value = txtName.Text;
+                cmd.Parameters["@CountryCode"].Value = txtCountryCode.Text;
+                cmd.Parameters["@District"].Value = txtDistrict.Text;
+                cmd.Parameters["@Population"].Value = int.Parse(txtPopulation.Text);
 
                 // SQL 문을 실행하고 영향을 받은 행 수를 리턴한다.
                 if (cmd.ExecuteNonQuery()==1)
                 {
-                    ShowDataAfterInserted();
-                    MessageBox.Show("Data Inserted.");
+                    ShowInsertedData("Data Inserted");
+                    TextBoxClear();
                 }
                 else
                 {
@@ -96,28 +94,34 @@ namespace WinFormDB03_DataCommand
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }
 
-        void ShowDataAfterInserted()
+        /* 새로운 데이터를 추가하고 MessageBox로 보여주는 메소드 */
+        void ShowInsertedData(string caption)
         {
             try
             {
-                string sql = $"SELECT * FROM city WHERE Name='{txtName.Text}' AND CountryCode='{txtCountryCode.Text}'";
+                string sql = "SELECT * FROM city WHERE name=@name AND countrycode=@countrycode";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
-                MySqlDataReader reader = cmd.ExecuteReader();
+                cmd.Parameters.Add("@name", MySqlDbType.VarChar);
+                cmd.Parameters.Add("@countrycode", MySqlDbType.VarChar, 3);
+                cmd.Parameters["@name"].Value = txtName.Text;
+                cmd.Parameters["@countrycode"].Value = txtCountryCode.Text;
 
+                MySqlDataReader reader = cmd.ExecuteReader();
+                string result="";
                 if (reader.Read())
                 {
-                    txtId.Text = reader.GetString("Id");
-                    txtName.Text = reader.GetString("Name");
-                    txtCountryCode.Text = reader.GetString("CountryCode");
-                    txtDistrict.Text = reader.GetString("District");
-                    txtPopulation.Text = reader.GetInt32("Population").ToString();
+                    result = $"id = {reader.GetString("Id")}\n";
+                    result += $"Name = {reader.GetString("Name")}\n";
+                    result += $"CountryCode = {reader.GetString("CountryCode")}\n";
+                    result += $"District = {reader.GetString("District")}\n";
+                    result += $"Population = {reader.GetInt32("Population")}\n";
                 }
                 reader.Close();
+                MessageBox.Show(result, caption);
             }
             catch (Exception ex)
             {
@@ -129,17 +133,51 @@ namespace WinFormDB03_DataCommand
         {
             try
             {
-                string sql = $"UPDATE city SET Name='{txtName.Text}', CountryCode='{txtCountryCode.Text}', District='{txtDistrict.Text}', Population='{txtPopulation.Text}' WHERE ID='{txtId.Text}'";  
+                string sql = "UPDATE city SET name=@name, countrycode=@countrycode, district=@district, population=@population where id=@id";  
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.Add("@id", MySqlDbType.VarChar);
+                cmd.Parameters.Add("@Name", MySqlDbType.VarChar);
+                cmd.Parameters.Add("@CountryCode", MySqlDbType.VarChar, 3);
+                cmd.Parameters.Add("@District", MySqlDbType.VarChar);
+                cmd.Parameters.Add("@Population", MySqlDbType.Int32);
+                cmd.Parameters["@id"].Value = txtId.Text;
+                cmd.Parameters["@Name"].Value = txtName.Text;
+                cmd.Parameters["@CountryCode"].Value = txtCountryCode.Text;
+                cmd.Parameters["@District"].Value = txtDistrict.Text;
+                cmd.Parameters["@Population"].Value = int.Parse(txtPopulation.Text);
 
                 if (cmd.ExecuteNonQuery() == 1)
                 {
-                    ShowDataAfterInserted();
-                    MessageBox.Show("Data Updated.");
+                    ShowInsertedData("Data Updated.");
                 }
                 else
                 {
                     MessageBox.Show("Data Not Updated.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string sql = "DELETE FROM city WHERE id=@id";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.Add("@id", MySqlDbType.VarChar);
+                cmd.Parameters["@id"].Value = txtId.Text;
+
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    TextBoxClear();
+                    MessageBox.Show("Data Deleted.");
+                }
+                else
+                {
+                    MessageBox.Show("Data Not Deleted.");
                 }
             }
             catch (Exception ex)
@@ -160,29 +198,6 @@ namespace WinFormDB03_DataCommand
             txtCountryCode.Clear();
             txtDistrict.Clear();
             txtPopulation.Clear();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string sql = $"DELETE FROM city WHERE id='{txtId.Text}'";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    TextBoxClear();
-                    MessageBox.Show("Data Deleted.");
-                }
-                else
-                {
-                    MessageBox.Show("Data Not Deleted.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
     }
 }

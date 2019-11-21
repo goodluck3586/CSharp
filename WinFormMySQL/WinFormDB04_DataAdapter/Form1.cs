@@ -26,13 +26,27 @@ namespace WinFormDB04_DataAdapter
         private void Form1_Load(object sender, EventArgs e)
         {
             conn = new MySqlConnection("server=localhost;port=3306;username=root;database=world;password=1111");
-            conn.Open();
-            ShowConnectionState();
-            adapter = new MySqlDataAdapter("SELECT * FROM city", conn);
-            adapter.Fill(table);
-            ShowData(position);
+
+            try
+            {
+                conn.Open();
+                if (conn.State == ConnectionState.Open)
+                {
+                    labelDBConnStatus.Text = "연결 성공";
+                    labelDBConnStatus.ForeColor = Color.Green;
+                }
+
+                adapter = new MySqlDataAdapter("SELECT * FROM city", conn);
+                adapter.Fill(table);
+                ShowData(position);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            } 
         }
 
+        /* 화면의 TextBox에 선택된 데이터를 출력하는 메소드 */
         private void ShowData(int index)
         {
             txtId.Text = table.Rows[index][0].ToString();
@@ -40,34 +54,6 @@ namespace WinFormDB04_DataAdapter
             txtCountryCode.Text = table.Rows[index][2].ToString();
             txtDistrict.Text = table.Rows[index][3].ToString();
             txtPopulation.Text = table.Rows[index][4].ToString();
-        }
-
-        private void ShowConnectionState()
-        {
-            if (conn.State == ConnectionState.Open)
-            {
-                labelDBConnStatus.Text = "연결 성공";
-                labelDBConnStatus.ForeColor = Color.Green;
-            }
-            else
-            {
-                labelDBConnStatus.Text = "연결 실패";
-                labelDBConnStatus.ForeColor = Color.Red;
-            }
-        }
-
-        private void btnTextBoxClear_Click(object sender, EventArgs e)
-        {
-            TextBoxClear();
-        }
-
-        private void TextBoxClear()
-        {
-            txtId.Clear();
-            txtName.Clear();
-            txtCountryCode.Clear();
-            txtDistrict.Clear();
-            txtPopulation.Clear();
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
@@ -85,8 +71,7 @@ namespace WinFormDB04_DataAdapter
             {
                 MessageBox.Show("데이터 없음.");
                 position = table.Rows.Count - 1;
-            }
-                
+            }   
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
@@ -99,13 +84,26 @@ namespace WinFormDB04_DataAdapter
                 MessageBox.Show("데이터 없음.");
                 position = 0;
             }
-                
         }
 
         private void btnLast_Click(object sender, EventArgs e)
         {
             position = table.Rows.Count - 1;
             ShowData(position);
+        }
+
+        private void btnTextBoxClear_Click(object sender, EventArgs e)
+        {
+            TextBoxClear();
+        }
+
+        private void TextBoxClear()
+        {
+            txtId.Clear();
+            txtName.Clear();
+            txtCountryCode.Clear();
+            txtDistrict.Clear();
+            txtPopulation.Clear();
         }
     }
 }
