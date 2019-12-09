@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
-namespace WinFormProjectSample
+namespace WinFormProject_Excel
 {
     public partial class Form1 : Form
     {
@@ -17,7 +19,7 @@ namespace WinFormProjectSample
         MySqlDataAdapter dataAdapter;
         DataSet dataSet;
         int selectedRowIndex;
-
+        string fsPath = "";         // 저장할 파일 경로 저장
         public Form1()
         {
             InitializeComponent();
@@ -310,8 +312,6 @@ namespace WinFormProjectSample
             Dig.Dispose();
         }
 
-
-
         // 검색 조건 초기화 함수
         private void btnClear_Click(object sender, EventArgs e)
         {
@@ -323,5 +323,110 @@ namespace WinFormProjectSample
             textBoxMax.Clear();
         }
 
+        // 저장 버튼 클릭(txt, excel)
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.RowCount == 0)
+            {
+                MessageBox.Show("저장할 파일 정보가 없습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (rbText.Checked == true)
+            {
+                saveFileDialog1.Filter = "텍스트 파일(*.txt)|*.txt";
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    fsPath = saveFileDialog1.FileName;  // SaveFileDialog에 지정한 파일경로를 전역 변수인 fsPath에 저장
+                    TextFileSave();
+                }
+            }
+            else
+            {
+                saveFileDialog1.Filter = "엑셀 파일(*.xlsx)|*.xlsx";
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    fsPath = saveFileDialog1.FileName;
+                    ExcelFileSave();
+                }
+            }
+        }
+
+        // 텍스트 파일로 저장
+        private void TextFileSave()
+        {
+            // SaveFileDialog에 지정한 파일경로에 Stream 생성
+            using (StreamWriter sw = new StreamWriter(fsPath))
+            {
+                // Column Title 한번 출력
+                foreach (DataColumn col in dataSet.Tables["city"].Columns)
+                {
+                    sw.Write($"{col.ColumnName}\t");
+                }
+                sw.WriteLine();
+
+                // DataGridView에 기록된 모든 파일 정보를 Text파일에 출력
+                foreach (DataRow row in dataSet.Tables["city"].Rows)
+                {
+                    string rowString = "";
+                    foreach (var item in row.ItemArray)
+                    {
+                        rowString += item.ToString() + "\t";
+                    }
+                    sw.WriteLine(rowString);
+                }
+                sw.Close();
+            }
+        }
+
+        // 엑셀 파일로 저장
+        private void ExcelFileSave()
+        {
+            #region 1. 엑셀 사용에 필요한 객체 생성
+            // 엑셀을 사용하기 위한 클래스 객체 생성
+            Excel.Application eApp;     // 엑셀 프로그램 
+            Excel.Workbook eWorkbook;   // 여러 WorkSheet 포함한 단위
+            Excel.Worksheet eWorkSheet;
+
+            string[,] data;     // 엑셀에 데이터를 저장하기 위한 2차원 배열
+
+            eApp = new Excel.Application();         // 엑셀 프로그램 객체 생성
+            eWorkbook = eApp.Workbooks.Add(true);   // 엑셀에 Workbook 추가, 초기화
+            eWorkSheet = eWorkbook.Sheets[1] as Excel.Worksheet;    // WorkSheet 생성, Excel Sheet 배열은 1부터 시작한다.
+            #endregion
+
+            #region 2. 엑셀에 데이터를 저장할 2차원 데이터 배열(data[,]) 준비
+            // 엑셀에 저장할 데이터 크기 지정
+            int cnum = dataSet.Tables["city"].Columns.Count + 1;
+            int rnum = dataSet.Tables["city"].Rows.Count + 1;
+            data = new string[rnum+1, cnum+1];
+
+            // 엑셀에 저장할 2차원 배열에 Column 이름 저장
+            for (int i = 0; i < dataSet.Tables["city"].Columns.Count; i++)
+            {
+                data[0, i] = dataSet.Tables["city"].Columns[i].ColumnName;
+            }
+
+            // 엑셀에 저장할 2차원 배열에 데이터 저장
+            for (int i = 0; i < dataSet.Tables["city"].Rows.Count; i++)                    // 리스트뷰의 행수만큼 반복
+            {
+                for (int j = 0; j < dataSet.Tables["city"].Columns.Count; j++)    // 한 행의 열수만큼 반복
+                {
+                    data[i + 1, j] = dataSet.Tables["city"].Rows[i].ItemArray[j].ToString();    // data 배열에 데이터 저장
+                }
+            }
+            #endregion
+
+            #region 3. 준비된 데이터를 엑셀에 저장
+            //string EndStr = "F" + rnum.ToString();      // 8개의 파일을 선택한 경우 F9 => 마지막 데이터 저장셀 주소
+            string EndStr = Convert.ToChar(cnum -2 + 65) + rnum.ToString();      // 8개의 파일을 선택한 경우 F9 => 마지막 데이터 저장셀 주소
+            eWorkSheet.get_Range("A1:" + EndStr).Value = data;     // 데이터 기록
+
+            eWorkbook.SaveAs(fsPath, Excel.XlFileFormat.xlWorkbookDefault, Type.Missing, Type.Missing, false, false,
+                Excel.XlSaveAsAccessMode.xlShared, false, false, Type.Missing, Type.Missing, Type.Missing);
+            eWorkbook.Close(false, Type.Missing, Type.Missing);
+            eApp.Quit();
+            #endregion
+        }
     }
 }

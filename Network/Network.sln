@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network01_IPAddress", "Network01_IPAddress\Network01_IPAddress.csproj", "{ADC9F96D-7157-4EBD-929A-650E5F220D17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network02_TcpListener", "Network02_TcpListener\Network02_TcpListener.csproj", "{77EB3F0D-5273-4327-892A-FC8D59FCD050}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network03_TcpClient", "Network03_TcpClient\Network03_TcpClient.csproj", "{A9803707-21CF-4F5C-B3EB-7D448137811C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network04_TcpListener", "Network04_TcpListener\Network04_TcpListener.csproj", "{F984304E-E93B-4CF5-9677-00CFA9DA544E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network05_TcpClient", "Network05_TcpClient\Network05_TcpClient.csproj", "{BC947B81-5345-4578-896B-D84F515FFAE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network06_TcpListener", "Network06_TcpListener\Network06_TcpListener.csproj", "{9D1F67BA-9206-4172-86F5-63FC5BBC34BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Network07_TcpClient", "Network07_TcpClient\Network07_TcpClient.csproj", "{5CD79C15-3EF4-4F09-9840-79C434AEC38C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormNet01_Server", "WinFormNet01\WinFormNet01_Server.csproj", "{651BA82C-49AF-4A4B-BBC3-412CE1983CA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormNet02_Client", "WinFormNet02_Client\WinFormNet02_Client.csproj", "{F3357038-0881-49F8-8AA4-15981E96B554}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadReview", "ThreadReview\ThreadReview.csproj", "{E4697A86-90CD-4DDC-92EC-4FA6BF7C75F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormNet03_Server", "WinFormNet03_Server\WinFormNet03_Server.csproj", "{779E994B-5C30-444A-B589-0AC9579DB824}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADC9F96D-7157-4EBD-929A-650E5F220D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADC9F96D-7157-4EBD-929A-650E5F220D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADC9F96D-7157-4EBD-929A-650E5F220D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADC9F96D-7157-4EBD-929A-650E5F220D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77EB3F0D-5273-4327-892A-FC8D59FCD050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77EB3F0D-5273-4327-892A-FC8D59FCD050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77EB3F0D-5273-4327-892A-FC8D59FCD050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77EB3F0D-5273-4327-892A-FC8D59FCD050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9803707-21CF-4F5C-B3EB-7D448137811C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9803707-21CF-4F5C-B3EB-7D448137811C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9803707-21CF-4F5C-B3EB-7D448137811C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9803707-21CF-4F5C-B3EB-7D448137811C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F984304E-E93B-4CF5-9677-00CFA9DA544E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F984304E-E93B-4CF5-9677-00CFA9DA544E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F984304E-E93B-4CF5-9677-00CFA9DA544E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F984304E-E93B-4CF5-9677-00CFA9DA544E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC947B81-5345-4578-896B-D84F515FFAE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC947B81-5345-4578-896B-D84F515FFAE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC947B81-5345-4578-896B-D84F515FFAE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC947B81-5345-4578-896B-D84F515FFAE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D1F67BA-9206-4172-86F5-63FC5BBC34BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D1F67BA-9206-4172-86F5-63FC5BBC34BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D1F67BA-9206-4172-86F5-63FC5BBC34BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D1F67BA-9206-4172-86F5-63FC5BBC34BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CD79C15-3EF4-4F09-9840-79C434AEC38C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD79C15-3EF4-4F09-9840-79C434AEC38C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD79C15-3EF4-4F09-9840-79C434AEC38C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD79C15-3EF4-4F09-9840-79C434AEC38C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{651BA82C-49AF-4A4B-BBC3-412CE1983CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{651BA82C-49AF-4A4B-BBC3-412CE1983CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{651BA82C-49AF-4A4B-BBC3-412CE1983CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{651BA82C-49AF-4A4B-BBC3-412CE1983CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3357038-0881-49F8-8AA4-15981E96B554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3357038-0881-49F8-8AA4-15981E96B554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3357038-0881-49F8-8AA4-15981E96B554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3357038-0881-49F8-8AA4-15981E96B554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4697A86-90CD-4DDC-92EC-4FA6BF7C75F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4697A86-90CD-4DDC-92EC-4FA6BF7C75F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4697A86-90CD-4DDC-92EC-4FA6BF7C75F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4697A86-90CD-4DDC-92EC-4FA6BF7C75F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{779E994B-5C30-444A-B589-0AC9579DB824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{779E994B-5C30-444A-B589-0AC9579DB824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{779E994B-5C30-444A-B589-0AC9579DB824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{779E994B-5C30-444A-B589-0AC9579DB824}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB473C0C-3045-42ED-9FA4-3B5B22AA1DFB}
+	EndGlobalSection
+EndGlobal

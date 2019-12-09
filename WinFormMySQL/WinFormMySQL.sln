@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormDB10_NewForm", "WinF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormProjectSample", "WinFormProjectSample\WinFormProjectSample.csproj", "{7E175B9B-58D6-4055-A532-DA45DFBA0B02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormProject_Excel", "WinFormProject_Excel\WinFormProject_Excel.csproj", "{BC719183-FD0C-471F-BE70-E53C16413F91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice_testDB_OrderTable", "Practice_testDB_OrderTable\Practice_testDB_OrderTable.csproj", "{F3F60C41-A6B3-40A5-8D21-DBAEABD402ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +109,14 @@ Global
 		{7E175B9B-58D6-4055-A532-DA45DFBA0B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E175B9B-58D6-4055-A532-DA45DFBA0B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E175B9B-58D6-4055-A532-DA45DFBA0B02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC719183-FD0C-471F-BE70-E53C16413F91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC719183-FD0C-471F-BE70-E53C16413F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC719183-FD0C-471F-BE70-E53C16413F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC719183-FD0C-471F-BE70-E53C16413F91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3F60C41-A6B3-40A5-8D21-DBAEABD402ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3F60C41-A6B3-40A5-8D21-DBAEABD402ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3F60C41-A6B3-40A5-8D21-DBAEABD402ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3F60C41-A6B3-40A5-8D21-DBAEABD402ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
