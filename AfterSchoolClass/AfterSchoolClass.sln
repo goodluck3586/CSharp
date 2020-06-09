@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex05_Overloading", "Ex05_Ov
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex06_parameter", "Ex06_parameter\Ex06_parameter.csproj", "{32557709-B317-4B9F-AE7C-F55F9004E51C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex07_Class", "Ex07_Class\Ex07_Class.csproj", "{33894C9F-1FBF-4725-8403-E4D471208773}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{32557709-B317-4B9F-AE7C-F55F9004E51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32557709-B317-4B9F-AE7C-F55F9004E51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32557709-B317-4B9F-AE7C-F55F9004E51C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33894C9F-1FBF-4725-8403-E4D471208773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33894C9F-1FBF-4725-8403-E4D471208773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33894C9F-1FBF-4725-8403-E4D471208773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33894C9F-1FBF-4725-8403-E4D471208773}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
