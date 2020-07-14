@@ -53,6 +53,8 @@ namespace Ex12_Polymorphism
 
     #region vitual, override 예약어 사용
     /*부모에서 정의한 Move()라는 하나의 메서드에 대해 자식 클래스의 인스턴스에 따라 다양하게 재정의 될 수 있다.     */
+    // C#에서 자식클래스가 해당 메소드를 오버라이드 할 수 있도록 허용하기 위해서는 해당 메소드를 abstract 또는 virtual로 선언 해 줘야 한다.
+    // abstract 와 virtual 의 차이 : abstract 메소드는 구현체(body)가 없지만 virtual은 구현체가 있다.
     /*class Mammal
     {
         public String name;
